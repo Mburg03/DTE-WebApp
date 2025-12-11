@@ -60,6 +60,7 @@ app.use(morgan('dev'));
 app.use('/api/auth', limiter, require('./routes/auth'));
 app.use('/api/gmail', limiter, require('./routes/gmail'));
 app.use('/api/keywords', limiter, require('./routes/keywords'));
+app.use('/api/packages', limiter, require('./routes/packages'));
 
 app.get('/', limiter, (req, res) => {
     res.json({ msg: 'Factura Automate API Running' });
